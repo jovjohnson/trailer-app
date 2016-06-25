@@ -26,9 +26,13 @@ app.use(function(req, res, next) {
 // });
 
 
-
+//connect to mongoDB
 mongoose.connect('mongodb://localhost/trailerapp');
 mongoose.connection.once('open', function() {
+
+  //load the models
+  app.models = require('./models/index');
+
   console.log('*RAWM saxaphone plays*');
   app.listen(8000);
 });
