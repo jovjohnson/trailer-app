@@ -8,8 +8,8 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MoviesCtrl', function ($scope) {
-    $scope.movies = [
+  .controller('MoviesCtrl', function($scope) {
+    $scope.items = [
       {
         title: "The Empire Strikes Back",
         url: "http://youtube.com/embed/1g3_CFmnU7k"
@@ -20,6 +20,5 @@ angular.module('clientApp')
       }
     ];
 
-    console.log($scope.movies);
-
+    console.log($scope.items)
 });

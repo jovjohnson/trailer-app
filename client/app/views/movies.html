@@ -1,4 +1,12 @@
-<ul>
-  <li ng-repeat='movie in movies'></li>
-  <li>{{movie.title}}</li>
-</ul>
+<table class="table table-striped">
+  <thead>
+    <th>Title</th>
+    <th>URL</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat='item in items'>
+      <td>{{item.title}}</td>
+      <td>{{item.url}}</td>
+    </tr>
+  </tbody>
+</table>
