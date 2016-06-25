@@ -33,6 +33,11 @@ mongoose.connection.once('open', function() {
   //load the models
   app.models = require('./models/index');
 
+  var routes = require('./routes');
+  _.each(routes, function(controller, route) {
+    app.use(route, controller(app, route));
+  });
+
   console.log('*RAWM saxaphone plays*');
   app.listen(8000);
 });
