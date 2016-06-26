@@ -1,3 +1,5 @@
+<a class="btn btn-primary" href="/#/create/movie"><span class="glyphicon glyphicon-plus"></span> Create Movie</a>
+<br>
 <table class="table table-striped">
   <thead>
     <th>Title</th>
@@ -5,8 +7,18 @@
   </thead>
   <tbody>
     <tr ng-repeat='item in items'>
-      <td>{{item.title}}</td>
+      <td><a ng-href="/#/movie/{{ movie._id }}">{{item.title}}</a></td>
       <td>{{item.url}}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/movie/{{ movie._id }}/edit" class="btn btn-default">
+          <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/movie/{{ movie._id }}/delete" class="btn btn-danger">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
