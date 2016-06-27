@@ -7,14 +7,14 @@
   </thead>
   <tbody>
     <tr ng-repeat='item in items'>
-      <td><a ng-href="/#/movie/{{ movie._id }}">{{item.title}}</a></td>
+      <td><a ng-href="/#/movie/{{ item._id }}">{{item.title}}</a></td>
       <td>{{item.url}}</td>
       <td>
         <div class="button-group">
-          <a ng-href="/#/movie/{{ movie._id }}/edit" class="btn btn-default">
+          <a ng-href="/#/movie/{{ item._id }}/edit" class="btn btn-default">
           <span class="glyphicon glyphicon-edit"></span>
           </a>
-          <a ng-href="/#/movie/{{ movie._id }}/delete" class="btn btn-danger">
+          <a ng-href="/#/movie/{{ item._id }}/delete" class="btn btn-danger">
           <span class="glyphicon glyphicon-remove-circle"></span>
           </a>
         </div>

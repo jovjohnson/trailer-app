@@ -72,3 +72,8 @@ angular
       templateUrl: 'views/youtube.html'
     };
   })
+  .filter('trusted', function($sce) {
+    return function(url) {
+      return $sce.trustAsResourceUrl(url);
+    };
+  })
