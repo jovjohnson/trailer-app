@@ -10,7 +10,13 @@ var Movie = new mongoose.Schema({
   url: {
     type: String,
     required: true
+  },
+  category: {
+    type: String,
+  },
+  notes: {
+    type: String
   }
 });
 
-module.exports = Movie; 
+module.exports = Movie;
