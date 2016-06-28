@@ -74,6 +74,7 @@ angular
   })
   .filter('trusted', function ($sce) {
     return function(url) {
-        return $sce.trustAsResourceUrl(url);
-      }
-    });
+      console.log(url)
+      return $sce.trustAsResourceUrl(url);
+    }
+  });
