@@ -11,9 +11,6 @@ var Movie = new mongoose.Schema({
     type: String,
     required: true
   },
-  category: {
-    type: String,
-  },
   notes: {
     type: String
   }
